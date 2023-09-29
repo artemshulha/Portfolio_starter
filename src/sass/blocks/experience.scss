@@ -1,0 +1,97 @@
+.experience {
+    min-height: 620px;
+    &__devider {
+        width: 60px;
+        height: 3px;
+        background-color: $main-color;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+    &__wrapper {
+        padding: 50px 89px 0 72px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 140px;
+    }
+    &__column {
+        &-title {
+            position: relative;
+            padding-left: 35px;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background-color: $main-color;
+                border-radius: 100%;
+                left: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+    
+            }
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: black;
+                    width: 1px;
+                    height: calc(100% + 23px);
+                    top: -23px;
+                }
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        &:before {
+            content: '';
+            height: 1px;
+            width: 43px;
+            background-color: black;
+            position: absolute;
+            top: 41px;
+        }
+        &-head {
+           padding-left: 100px; 
+           padding-top: 25px;
+        }
+        &-top {
+            color: #000;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        &-bot {
+            color: #000;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        &-body {
+            padding-left: 43px;
+            margin-top: 12px;
+            font-size: 12px;
+            font-weight: 500;
+
+        }
+        &-icon {
+            position: absolute;
+            left: 61px;
+            top: 37px;
+            @include before_circle;
+            &:before {
+                top: -14px;
+                left: -18px;
+            }
+        
+
+        }
+    }
+
+}

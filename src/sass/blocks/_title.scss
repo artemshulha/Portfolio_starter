@@ -1,0 +1,36 @@
+.title {
+    font-weight: bold;
+    font-style: 36px;
+    line-height: 60px;
+    color: azure;
+    &_fz14 {
+        font-size: 14px;
+        line-height: 21px;
+        
+    }
+    &_fz16 {
+        font-size: 16px;
+        &_black {
+            position: relative;
+            color: black;
+            text-align: center;
+            @include before_circle;
+            &::before {
+                content: '';
+                left: 47%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    &_fz20 {
+        font-size: 20px;
+        color: #000;
+    }
+    &_fz36 {
+        font-size: 36px;
+        text-align: center;
+    }
+    &_fz48 {
+        font-size: 48px;
+    }
+}
